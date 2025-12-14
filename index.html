@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Foodie Delight</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- GSAP, Anime.js, Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <canvas id="bg-animation"></canvas>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">🍔 Foodie Delight</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <h1>Welcome to Foodie Delight</h1>
+      <p>Delicious food, delivered to your door with style and creativity!</p>
+      <a href="#menu" class="btn">See Menu</a>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <div class="menu-category" id="deals">
+        <h3>Deals</h3>
+        <div class="menu-row" id="deals-row"></div>
+      </div>
+      <div class="menu-category" id="burgers">
+        <h3>Burgers</h3>
+        <div class="menu-row" id="burgers-row"></div>
+      </div>
+      <div class="menu-category" id="sandwiches">
+        <h3>Sandwiches</h3>
+        <div class="menu-row" id="sandwiches-row"></div>
+      </div>
+      <div class="menu-category" id="shawarma">
+        <h3>Shawarma</h3>
+        <div class="menu-row" id="shawarma-row"></div>
+      </div>
+      <div class="menu-category" id="wraps">
+        <h3>Wraps</h3>
+        <div class="menu-row" id="wraps-row"></div>
+      </div>
+      <div class="menu-category" id="fries">
+        <h3>Loaded Fries</h3>
+        <div class="menu-row" id="fries-row"></div>
+      </div>
+      <div class="menu-category" id="appetizers">
+        <h3>Appetizers</h3>
+        <div class="menu-row" id="appetizers-row"></div>
+      </div>
+      <div class="menu-category" id="addons">
+        <h3>Add-ons</h3>
+        <div class="menu-row" id="addons-row"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <h2 class="about-title">
+          Welcome to <span>Foodie Delight</span> – Karachi's Favorite Spot!
+        </h2>
+        <p class="about-desc">
+          Looking for the perfect place to grab a juicy burger, loaded fries, or
+          a crispy wrap in Karachi? At Foodie Delight, we serve up bold flavors,
+          freshly prepared meals, and quick service—whether you're dining in
+          with friends or ordering from the comfort of your home.
+        </p>
+        <p class="about-desc">
+          Located in the heart of Karachi, Foodie Delight brings together fast
+          food favorites made from high-quality ingredients and served with
+          passion. From our sizzling chicken hotshots to fully loaded fries
+          smothered in sauces and cheese, every item on our menu is crafted to
+          satisfy your cravings.
+        </p>
+        <div class="about-features">
+          <div class="feature-card">
+            <h3>Signature Burgers</h3>
+            <p>Classic, spicy, and cheesy creations</p>
+          </div>
+          <div class="feature-card">
+            <h3>Loaded & Plain Fries</h3>
+            <p>A perfect snack or side</p>
+          </div>
+          <div class="feature-card">
+            <h3>Delicious Wraps</h3>
+            <p>Stuffed and grilled for maximum flavor</p>
+          </div>
+          <div class="feature-card">
+            <h3>Crispy Hotshots</h3>
+            <p>The perfect spicy bite</p>
+          </div>
+        </div>
+        <div class="about-footer">
+          <p>
+            Whether you're visiting us for a casual lunch, weekend hangout, or a
+            late-night craving, Foodie Delight offers a cozy dine-in experience
+            and reliable, fast home delivery across Karachi, including DHA,
+            Gulshan, Clifton, and beyond.
+          </p>
+          <a href="#contact" class="about-btn">Order or Drop By Today!</a>
+          <p class="about-tagline">
+            Foodie Delight – Where Karachi Comes to Eat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+        <div id="contact-msg"></div>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Foodie Delight. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Popup Modal -->
+    <div id="cityModal" class="modal-overlay">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="modal-header">
+          <img
+            src="images/logo.jpg"
+            alt="Location"
+            class="modal-icon"
+            onerror="this.style.display='none'"
+          />
+          <h2>Welcome to Foodie Delight!</h2>
+          <p>Tell us where you are for a better experience</p>
+        </div>
+        <form id="cityForm" autocomplete="off" method="post">
+          <div class="modal-group">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="Enter your city"
+              required
+            />
+          </div>
+          <div class="modal-group">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="Your area or street"
+              required
+            />
+          </div>
+          <div class="modal-group">
+            <label for="contact">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="03xx-xxxxxxx"
+              required
+            />
+          </div>
+          <button type="submit" class="modal-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="cart-icon" onclick="toggleCartSidebar()">
+      🛒<span id="cart-count">0</span>
+    </div>
+
+    <div id="cart-sidebar">
+      <div class="cart-header">
+        <h3>Your Cart</h3>
+        <button onclick="toggleCartSidebar()">Close</button>
+      </div>
+      <div id="cart-items"></div>
+      <canvas id="cart-particles-canvas" class="cart-particles"></canvas>
+      <div class="cart-total">Total: Rs <span id="cart-total">0</span></div>
+    </div>
+  </body>
+</html>
