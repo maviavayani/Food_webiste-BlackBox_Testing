@@ -3,11 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import unittest
-
 class TC07_CloseCart(BaseTest):
-
     def test_close_cart(self):
-
         time.sleep(3)
         try:
             close_popup = self.wait.until(
@@ -39,12 +36,8 @@ class TC07_CloseCart(BaseTest):
         )
         self.driver.execute_script("arguments[0].click();", close_btn)
         time.sleep(2)
-
-
         sidebar = self.driver.find_element(By.ID, "cart-sidebar")
         self.assertNotIn("active", sidebar.get_attribute("class"))
-
         print("TC-07 PASS: Cart closed successfully")
-
 if __name__ == "__main__":
     unittest.main(verbosity=2)
