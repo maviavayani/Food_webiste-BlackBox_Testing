@@ -113,10 +113,11 @@ It includes a popup for location details, a dynamic cart system, and a contact f
 
 3. **Run the Test Script**
 
-   - Open a terminal in the `selenium_test` folder, for example:
+   - Open a terminal in the `Automated_test` folder, for example:
      ```
-     cd C:\xampp\htdocs\project\selenium_test
-     python test_blackbox.py
+     cd C:\xampp\htdocs\project\Automated_test
+     python Complete_test_blackboc.py
+     python test_TC01_website_load.py.....
      ```
    - The script will open Chrome and automatically:
      - Load the site
