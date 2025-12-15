@@ -37,7 +37,7 @@ It includes a popup for location details, a dynamic cart system, and a contact f
 
 - **Testing**
   - Python 3
-  - Selenium WebDriver (`selenium_test/test_blackbox.py`)
+  - Selenium WebDriver (`Automated_test/Complete Automated Test and individual Test cases files`)
 
 ## 4. Folder / File Layout (short)
 
@@ -46,7 +46,7 @@ It includes a popup for location details, a dynamic cart system, and a contact f
 - `images/` – images used in the UI
 - `php/` – PHP backend files (contact, popup, etc.)
 - `save_popup.php`, `setup_database.php` – extra PHP endpoints / DB setup
-- `selenium_test/test_blackbox.py` – automated UI tests written in Python + Selenium
+- `Automated_test/Complete Automated Test and individual Test cases files` – automated UI tests written in Python + Selenium
 
 ## 5. How to Run the PHP Project (XAMPP + htdocs)
 
